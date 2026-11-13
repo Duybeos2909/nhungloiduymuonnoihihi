@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gửi em 💗</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Be+Vietnam+Pro:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#ffe9ee;--ink:#4a1f2e;--pink:#ff5d8f;--soft:#ffd0dc;--card:#fff7f9;--muted:#8a5566;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#2a1219;--ink:#ffe3ea;--pink:#ff7aa5;--soft:#4a2230;--card:#381824;--muted:#d9a3b4}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#2a1219;--ink:#ffe3ea;--pink:#ff7aa5;--soft:#4a2230;--card:#381824;--muted:#d9a3b4}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Be Vietnam Pro',system-ui,sans-serif;text-align:center;min-height:100vh;overflow-x:hidden}
+main{max-width:520px;margin:0 auto;padding:40px 20px 64px}
+h1{font-family:'Baloo 2',system-ui,sans-serif;font-weight:800;font-size:clamp(2.2rem,10vw,3.4rem);line-height:1.08;margin:8px 0 12px}
+.sub{color:var(--muted);margin:0 0 24px}
+button{font-family:'Baloo 2',system-ui,sans-serif;font-weight:700;font-size:1.15rem;border:0;border-radius:999px;padding:14px 30px;background:var(--pink);color:#fff;cursor:pointer;box-shadow:0 6px 0 rgba(0,0,0,.15);transition:transform .1s}
+button:active{transform:translateY(4px);box-shadow:0 2px 0 rgba(0,0,0,.15)}
+button:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+#card{margin:0 auto;min-height:130px;padding:24px 20px;background:var(--card);border-radius:24px;border:2px dashed var(--pink);font-family:'Baloo 2',system-ui,sans-serif;font-weight:700;font-size:1.35rem;line-height:1.35;display:flex;align-items:center;justify-content:center}
+#card.pop{animation:pop .35s ease}
+@keyframes pop{0%{transform:scale(.92);opacity:.3}100%{transform:scale(1);opacity:1}}
+.row{display:flex;gap:16px;justify-content:center;align-items:center;min-height:90px;margin-top:12px}
+#yes{transition:transform .2s}
+#no{background:var(--soft);color:var(--ink);z-index:5;touch-action:none;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+#msg{min-height:1.6em;color:var(--muted)}
+.meter{margin:24px 0 6px;font-size:.95rem;color:var(--muted)}
+.bar{height:16px;background:var(--soft);border-radius:99px;overflow:hidden}
+.fill{height:100%;width:0;background:linear-gradient(90deg,#ff8fb0,var(--pink));border-radius:99px;transition:width .5s}
+.count{font-size:.9rem;color:var(--muted);margin-top:14px}
+.final{display:none;margin-top:28px;padding:24px;background:var(--pink);color:#fff;border-radius:24px;font-family:'Baloo 2',system-ui,sans-serif;font-weight:700;font-size:1.3rem;line-height:1.4}
+.final.show{display:block;animation:pop .5s ease}
+.float{position:fixed;bottom:-40px;font-size:28px;pointer-events:none;animation:up 3s linear forwards}
+@keyframes up{to{transform:translateY(-110vh) rotate(30deg);opacity:0}}
+@media (prefers-reduced-motion:reduce){.float{animation:none}}
+</style>
+</head>
+<body>
+<main>
+  <h1>Gửi em, cô bé xinh nhất quả địa cầu</h1>
+  <p class="sub">Trắc nghiệm những gì anh nghĩ về em. Nhớ trả lời đủ 12 câu nhá. Chỉ cần bấm Có thôi 😝</p>
+  <div id="stage">
+    <div id="card" aria-live="polite"></div>
+    <div class="row"><button id="yes">Có</button><button id="no">Khom</button></div>
+    <div id="msg" aria-live="polite"></div>
+  </div>
+  <div class="meter">Độ hảo cảm của BDY dành cho em</div>
+  <div class="bar"><div class="fill" id="fill"></div></div>
+  <div class="count" id="count">Câu 1 / 12</div>
+  <div class="final" id="final">Qua 12 câu trên anh chỉ muốn bảo là em cố gắng hết sức òi, đừng buồn nựa nha ạ.Dù kết quả có như thế nào anh cũng chỉ muốn bé biết là anh tự hào về bé. Cô gái duyên dáng dịu dàng nhí nhảnh xinh đẹp nhất Miền Trung của lòng anh ạ. Cảm ơn em vì đã đến và thắp sáng bầu trời tăm tối trong lòng anh. Mong em mãi giữ nụ cười trên môi nhé, lúc em cười nhìn em xinh lắm á. Luv u hí hí💗</div>
+</main>
+<script>
+const qs=[
+"My xinh tới mức ai thấy cũng muốn xin vía, đúng hông?",
+"Xinh kiểu của My là xinh tự nhiên, nhìn hoài không chán, đúng hông?",
+"Nụ cười của em đôi lúc làm tui quên luôn mình định nói gì, em biết hông?",
+"Gió có nhanh cỡ nào cũng không bằng tốc độ tim tui đập khi nghe thấy em cười, tin hông?",
+"My chấp luôn phần filter, ngoài đời đã là bản đẹp nhất rồi, đúng hông?",
+"Nói chuyện với My là phần thú vị nhất trong ngày của anh á, bé biết hông?",
+"My xinh hơn 90 triệu con người trên mảnh đất hình chữ S này lun á, đúng hông?",
+"My vừa dễ thương vừa giỏi, ai thấy cũng quý, đúng hông?",
+"Tui thích cái cách My cười khi kể chuyện, My biết hông?",
+"Từ ngày có em bầu trời xám xịt của anh rạng rỡ hơn hẳn, em tin hong?",
+"Từ ngày nói chuyện với em, anh thấy cuộc sống trở nên thú vị hơn bao giờ hết, em biết hông? 🥺",
+"Do khoảng cách địa lý mình hơi xa nên anh muốn gửi em món quà này mà khom được thành ra phải tặng online, bông hoa này a gửi em, em nhận nha?",
+];
+const taunts=['Khom được đâu 😝','Né hoài luôn á','Bấm Có đi mà 🥺','Tay My chậm quá nè','Chỉ có một đáp án thôi đó','Bấm Có là xong liền à','liu liu đáp án chỉ có 1 hoi','chọn nút có đi kìa bướng thíaaaaaa'];
+const $=id=>document.getElementById(id);
+const card=$('card'),yes=$('yes'),no=$('no'),msg=$('msg'),fill=$('fill'),count=$('count'),fin=$('final');
+let i=0,tc=0,sc=1;
+function burst(){const e=['💗','🌸','✨','❤️'];for(let k=0;k<8;k++){const s=document.createElement('span');s.className='float';s.textContent=e[Math.floor(Math.random()*e.length)];s.style.left=Math.random()*95+'vw';s.style.animationDuration=(2+Math.random()*2)+'s';document.body.appendChild(s);setTimeout(()=>s.remove(),4200)}}
+function show(){
+  card.textContent=qs[i];card.classList.remove('pop');void card.offsetWidth;card.classList.add('pop');
+  count.textContent='Câu '+(i+1)+' / '+qs.length;
+  no.style.position='';no.style.left='';no.style.top='';
+  sc=1;yes.style.transform='';msg.textContent='';
+}
+function dodge(e){
+  if(e&&e.cancelable)e.preventDefault();
+  no.style.position='fixed';
+  const w=no.offsetWidth,h=no.offsetHeight,m=12;
+  const vw=document.documentElement.clientWidth,vh=window.innerHeight,yr=yes.getBoundingClientRect(),cur=no.getBoundingClientRect();
+  let x=m,y=m;
+  for(let n=0;n<20;n++){
+    x=m+Math.random()*Math.max(0,vw-w-2*m);y=m+Math.random()*Math.max(0,vh-h-2*m);
+    const far=Math.hypot(x-cur.left,y-cur.top)>120;
+    const clear=x+w<yr.left-20||x>yr.right+20||y+h<yr.top-20||y>yr.bottom+20;
+    if(far&&clear)break;
+  }
+  no.style.left=x+'px';no.style.top=y+'px';
+  msg.textContent=taunts[tc++%taunts.length];
+  sc=Math.min(1.8,sc+.12);yes.style.transform='scale('+sc+')';
+}
+function near(px,py){const r=no.getBoundingClientRect(),p=28;return px>r.left-p&&px<r.right+p&&py>r.top-p&&py<r.bottom+p}
+no.addEventListener('pointerenter',dodge);
+no.addEventListener('focus',dodge);
+no.addEventListener('mousedown',dodge);
+no.addEventListener('click',dodge);
+document.addEventListener('touchstart',e=>{const t=e.touches[0];if(t&&near(t.clientX,t.clientY))dodge(e)},{passive:false});
+document.addEventListener('pointermove',e=>{if(near(e.clientX,e.clientY))dodge()});
+yes.onclick=()=>{
+  i++;fill.style.width=Math.min(100,i/qs.length*100)+'%';burst();
+  if(i>=qs.length){$('stage').style.display='none';count.textContent='12 / 12';fin.classList.add('show');return}
+  show();
+};
+show();
+</script>
+</body>
+</html>

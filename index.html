@@ -32,6 +32,8 @@ button:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
 .count{font-size:.9rem;color:var(--muted);margin-top:14px}
 .final{display:none;margin-top:28px;padding:24px;background:var(--pink);color:#fff;border-radius:24px;font-family:'Baloo 2',system-ui,sans-serif;font-weight:700;font-size:1.3rem;line-height:1.4}
 .final.show{display:block;animation:pop .5s ease}
+.bouquet{display:block;width:min(190px,60vw);height:auto;margin:0 auto 16px;image-rendering:pixelated}
+.final-message{margin:0}
 .float{position:fixed;bottom:-40px;font-size:28px;pointer-events:none;animation:up 3s linear forwards}
 @keyframes up{to{transform:translateY(-110vh) rotate(30deg);opacity:0}}
 @media (prefers-reduced-motion:reduce){.float{animation:none}}
@@ -49,7 +51,66 @@ button:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
   <div class="meter">Độ hảo cảm của BDY dành cho em</div>
   <div class="bar"><div class="fill" id="fill"></div></div>
   <div class="count" id="count">Câu 1 / 12</div>
-  <div class="final" id="final">Qua 12 câu trên anh chỉ muốn bảo là em cố gắng hết sức òi, đừng buồn nựa nha ạ.Dù kết quả có như thế nào anh cũng chỉ muốn bé biết là anh tự hào về bé. Cô gái duyên dáng dịu dàng nhí nhảnh xinh đẹp nhất Miền Trung của lòng anh ạ. Cảm ơn em vì đã đến và thắp sáng bầu trời tăm tối trong lòng anh. Mong em mãi giữ nụ cười trên môi nhé, lúc em cười nhìn em xinh lắm á. Luv u hí hí💗</div>
+  <div class="final" id="final">
+    <svg class="bouquet" viewBox="0 0 160 176" role="img" aria-labelledby="bouquet-title">
+      <title id="bouquet-title">Bó hoa pixel anh gửi em</title>
+      <g shape-rendering="crispEdges">
+        <rect x="16" y="8" width="128" height="152" rx="16" fill="#fff0f4"/>
+        <rect x="78" y="46" width="4" height="62" fill="#438b57"/>
+        <rect x="46" y="61" width="4" height="49" fill="#438b57"/>
+        <rect x="110" y="60" width="4" height="50" fill="#438b57"/>
+        <rect x="54" y="69" width="12" height="8" fill="#75bd78"/>
+        <rect x="58" y="77" width="12" height="8" fill="#438b57"/>
+        <rect x="96" y="68" width="12" height="8" fill="#75bd78"/>
+        <rect x="92" y="76" width="12" height="8" fill="#438b57"/>
+        <rect x="72" y="79" width="12" height="8" fill="#75bd78"/>
+        <rect x="76" y="87" width="12" height="8" fill="#438b57"/>
+        <path d="M36 82h20v8h8v8h8v8h16v-8h8v-8h8v-8h20v12h-8v8h-8v8h-8v8h-8v8H68v-8h-8v-8h-8v-8h-8v-8h-8z" fill="#fffafc"/>
+        <path d="M36 82h8v20h8v8h8v8h8v12h-8v-8h-8v-8h-8v-8h-8z" fill="#ffd7e1"/>
+        <path d="M116 82h8v20h-8v8h-8v8h-8v12h8v-8h8v-8h8v-8h8z" fill="#ffd7e1"/>
+        <rect x="64" y="127" width="32" height="8" fill="#ff8fae"/>
+        <rect x="76" y="123" width="8" height="16" fill="#ff5d8f"/>
+        <path d="M76 131h-12v8h-8v8h12v-8h8zm8 0h12v8h8v8H92v-8h-8z" fill="#ff8fae"/>
+        <rect x="68" y="18" width="8" height="8" fill="#ffc5d4"/>
+        <rect x="76" y="10" width="8" height="8" fill="#ffc5d4"/>
+        <rect x="84" y="18" width="8" height="8" fill="#ffc5d4"/>
+        <rect x="60" y="26" width="8" height="8" fill="#ff8fae"/>
+        <rect x="68" y="26" width="8" height="8" fill="#ff5d8f"/>
+        <rect x="76" y="18" width="8" height="8" fill="#ff8fae"/>
+        <rect x="84" y="26" width="8" height="8" fill="#ff5d8f"/>
+        <rect x="92" y="26" width="8" height="8" fill="#ff8fae"/>
+        <rect x="68" y="34" width="8" height="8" fill="#ff5d8f"/>
+        <rect x="76" y="34" width="8" height="8" fill="#e83f76"/>
+        <rect x="84" y="34" width="8" height="8" fill="#ff5d8f"/>
+        <rect x="76" y="42" width="8" height="8" fill="#ff8fae"/>
+        <rect x="38" y="42" width="8" height="8" fill="#ffc5d4"/>
+        <rect x="46" y="34" width="8" height="8" fill="#ffc5d4"/>
+        <rect x="54" y="42" width="8" height="8" fill="#ffc5d4"/>
+        <rect x="30" y="50" width="8" height="8" fill="#ff8fae"/>
+        <rect x="38" y="50" width="8" height="8" fill="#ff5d8f"/>
+        <rect x="46" y="42" width="8" height="8" fill="#ff8fae"/>
+        <rect x="54" y="50" width="8" height="8" fill="#ff5d8f"/>
+        <rect x="62" y="50" width="8" height="8" fill="#ff8fae"/>
+        <rect x="38" y="58" width="8" height="8" fill="#ff5d8f"/>
+        <rect x="46" y="58" width="8" height="8" fill="#e83f76"/>
+        <rect x="54" y="58" width="8" height="8" fill="#ff5d8f"/>
+        <rect x="46" y="66" width="8" height="8" fill="#ff8fae"/>
+        <rect x="102" y="42" width="8" height="8" fill="#ffc5d4"/>
+        <rect x="110" y="34" width="8" height="8" fill="#ffc5d4"/>
+        <rect x="118" y="42" width="8" height="8" fill="#ffc5d4"/>
+        <rect x="94" y="50" width="8" height="8" fill="#ff8fae"/>
+        <rect x="102" y="50" width="8" height="8" fill="#ff5d8f"/>
+        <rect x="110" y="42" width="8" height="8" fill="#ff8fae"/>
+        <rect x="118" y="50" width="8" height="8" fill="#ff5d8f"/>
+        <rect x="126" y="50" width="8" height="8" fill="#ff8fae"/>
+        <rect x="102" y="58" width="8" height="8" fill="#ff5d8f"/>
+        <rect x="110" y="58" width="8" height="8" fill="#e83f76"/>
+        <rect x="118" y="58" width="8" height="8" fill="#ff5d8f"/>
+        <rect x="110" y="66" width="8" height="8" fill="#ff8fae"/>
+      </g>
+    </svg>
+    <p class="final-message">Qua 12 câu trên anh chỉ muốn bảo là em cố gắng hết sức òi, đừng buồn nựa nha ạ.Dù kết quả có như thế nào anh cũng chỉ muốn bé biết là anh tự hào về bé. Cô gái duyên dáng dịu dàng nhí nhảnh xinh đẹp nhất Miền Trung của lòng anh ạ. Cảm ơn em vì đã đến và thắp sáng bầu trời tăm tối trong lòng anh. Mong em mãi giữ nụ cười trên môi nhé, lúc em cười nhìn em xinh lắm á. Luv u hí hí💗</p>
+  </div>
 </main>
 <script>
 const qs=[
